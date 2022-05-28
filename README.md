@@ -4,7 +4,7 @@
 
 ### Description
 
-Since Rust is a compiled language and Raku connects to a Rust cdylib directly via the core [NativeCall](https://docs.raku.org/language/nativecall) capability, this raku module is more of a "how to" set of examples.
+Since Rust is a compiled language and Raku connects to a Rust ```cdylib``` directly via the core [NativeCall](https://docs.raku.org/language/nativecall) capability, this raku module is more of a "how to" set of examples.
 
 It has been dubbed Inline::Rust to follow the naming convention of similar Raku interface modules (but no actual Raku code is needed to make these examples work since NativeCall works out-of-the-box).
 
