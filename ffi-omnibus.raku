@@ -39,7 +39,7 @@ say sum_of_even( @numbers, @numbers.elems );
 ## Rust FFI Omnibus: Tuples 
 ## http:##jakegoulding.com/rust-ffi-omnibus/tuples/
 
-#`[ get segfault
+#[ get segfault
 class Tuple is repr('CStruct') {
     has uint32 $.x;
     has uint32 $.y;
