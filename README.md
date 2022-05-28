@@ -33,5 +33,5 @@ To make a new cdylib, you can do this:
  vi Cargo.toml, add [dependencies] and [lib] sections (see example)
  vi src/lib.rs, write some Rust code (see example)
  cargo build
- vi your-name.raku, write some Raku code (see example)
+ cd .. && vi your-name.raku, write some Raku code (see example)
  ```
