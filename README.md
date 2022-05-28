@@ -34,4 +34,5 @@ To make a new cdylib, you can do this:
  vi src/lib.rs, write some Rust code (see example)
  cargo build
  cd .. && vi your-name.raku, write some Raku code (see example)
+ raku your-name.raku
  ```
