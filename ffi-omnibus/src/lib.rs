@@ -101,8 +101,8 @@ impl From<Tuple> for (u32, u32) {
 // The exported C method
 #[no_mangle]
 //pub extern "C" fn flip_things_around(tup: Tuple) {
-pub extern "C" fn flip_things_around(tup: Tuple) -> Tuple {
-    flip_things_around_rust(tup.into()).into()
+pub extern "C" fn flip_things_around(tup: Tuple) -> *const Tuple {
+    &flip_things_around_rust(tup.into()).into()
 }
 
 // Rust FFI Omnibus: Objects

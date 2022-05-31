@@ -39,7 +39,7 @@ say sum_of_even( @numbers, @numbers.elems );
 ## Rust FFI Omnibus: Tuples 
 ## http:##jakegoulding.com/rust-ffi-omnibus/tuples/
 
-#[ get segfault
+#`[ getting funky values 
 class Tuple is repr('CStruct') {
     has uint32 $.x;
     has uint32 $.y;
@@ -48,6 +48,7 @@ sub flip_things_around(Tuple) returns Tuple is native($n-path) { * }
 
 my \initial = Tuple.new( x => 10, y => 20 );
 my \result  = flip_things_around(initial);
+dd result;
 say result.x, result.y;
 #]
 
