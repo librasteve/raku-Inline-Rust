@@ -80,3 +80,14 @@ my \pop1 = database.population_of('90210');
 my \pop2 = database.population_of('20500');
 say pop1 - pop2;
 
+# CPAN Platypus
+# https://metacpan.org/pod/FFI::Platypus::Lang::Rust
+
+sub get_lines(&callback (Str --> int32)) is native($n-path) { * }
+
+my &line-out = sub ( $line ) {
+    say "line> $line";
+}
+
+get_lines( &line-out );
+

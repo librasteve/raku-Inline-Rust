@@ -172,3 +172,21 @@ pub extern "C" fn zip_code_database_population_of(
     database.population_of(zip_str)
 }
 
+type RetLine = extern fn(line: *const u8);
+
+#[no_mangle]
+pub extern "C" fn get_lines(retline: RetLine) {
+
+    let lines: [&str; 3] = [
+        "Hello from rust!",
+        "Something else.",
+        "The last log line",
+    ];
+
+    for line in lines.iter() {
+        // convert string slice to a C style NULL terminated string
+        let line = CString::new(*line).unwrap();
+        retline(line.as_ptr());
+    }
+}
+
