@@ -4,21 +4,16 @@ constant $n-path = './ffi-omnibus/target/debug/foo';
 
 ## Rust FFI Omnibus: Integers
 ## http://jakegoulding.com/rust-ffi-omnibus/integers/
-
 sub addition(int32, int32) returns int32 is native($n-path) { * }
-
 say addition(1, 2); 
 
 ## Rust FFI Omnibus: String Arguments 
 ## http://jakegoulding.com/rust-ffi-omnibus/string-arguments/
-
 sub how_many_characters(Str is encoded('utf8')) returns int32 is native($n-path) { * }
-
 say how_many_characters("göes to élevên");
 
 ## Rust FFI Omnibus: String Return Values 
 ## http://jakegoulding.com/rust-ffi-omnibus/string-return-values/
-
 sub theme_song_generate(uint8) returns Pointer[Str] is encoded('utf8') is native($n-path) { * }
 sub theme_song_free(Pointer[Str]) is native($n-path) { * }
 
@@ -28,7 +23,6 @@ theme_song_free(song);
 
 ## Rust FFI Omnibus: Slice Arguments
 ## http://jakegoulding.com/rust-ffi-omnibus/slice-arguments/
-
 sub sum_of_even(CArray[uint32], size_t) returns uint32 is native($n-path) { * }
 
 my @numbers := CArray[uint32].new;
