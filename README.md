@@ -17,11 +17,10 @@ The raku examples are inspired by the [Rust FFI Omnibus](http://jakegoulding.com
 ### Getting Started
  
 ```
-docker run -it p6steve/raku-dan:polars-2022.02-arm64   
-(or edit the FROM --platform=linux/amd64 p6steve/rakudo:ubuntu-latest-amd64 and docker build... if you need Intel x86)
+docker run -it librasteve/rakudo:rusty
 cd ~ && git clone https://github.com/p6steve/raku-Inline-Rust.git
-cd raku-Inline-Rust
-raku ffi-omnibus.raku
+cd raku-Inline-Rust/ffi-omnibus && cargo build
+cd .. && raku ffi-omnibus.raku
 ```
 
 ### Do It Yourself
